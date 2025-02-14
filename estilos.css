@@ -1,0 +1,246 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+/*la distribución de los espacios de la pagina*/
+
+body{
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    "my-header my-header my-header"
+    "my-nav my-nav my-nav"
+    "my-main my-main my-main"
+    "my-footer my-footer my-footer";
+    grid-template-rows: 100px 50px 1fr 150px;
+    grid-template-columns: 100%;
+}
+
+header{
+    grid-area: my-header;
+    
+}
+
+nav{
+    grid-area: my-nav;
+    
+}
+
+main{
+    grid-area: my-main;
+    
+}
+
+
+
+footer{
+    grid-area: my-footer;
+    
+}
+
+/*los estilos del index.html*/
+
+header{
+    background-color: #E8B468;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.Logo{
+    width: 100px;
+    height: 100px;    
+}
+
+h1{
+    margin-left: 20px;
+    color: #E8D368;
+}
+
+.inicio1{
+    color: #E89F68;
+}
+
+.productonav{
+    color: #E89F68;
+}
+
+.presupuestonav{
+    color: #E89F68;
+}
+
+.contactonav{
+    color: #E89F68;
+}
+
+nav{
+    background-color: #E8C468;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul a{
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: #FAE5B0;
+}
+
+section h2{
+    margin-bottom: 20px;
+}
+
+main{
+    background-color: #E89F68;
+}
+
+.clase1{
+    height: 550px;
+    background: url(../assets/tiendaropa.svg.avif);
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2px;
+    padding: 50px;
+    color: white;
+}
+
+.clase2{
+    width: 60%;
+    margin: 50px 0;
+    padding: 10px; 
+    color: white;  
+}
+
+footer{
+    background-color: #FAE5B0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 1px;
+    text-align: center;
+    padding: 20px;
+    border-top: 3px solid #E8E368;;
+}
+
+footer a {
+    color: #E89F68;
+}
+
+/*Los estilos de algunas imágenes*/
+
+.insta{
+    width: 25px;
+    height: 25px;
+}
+
+.x{
+    width: 25px;
+    height: 25px;
+}
+
+/*css para el apartado de productos.html*/
+
+.productos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.producto{
+ height: 600px;
+ display: grid;
+ grid-template-rows: 80% 20%; 
+ padding: 20px;  
+ background-color: #E8D368;
+ transition: all 0.3s ease-in-out;
+ border: 2px solid #FAE5B0 ;
+}
+
+.producto:hover{
+    transform: translateY(-10px);
+}
+
+.producto img{
+    height: 500px;
+    width: 400px;
+    object-fit: cover;
+}
+
+.descrpicion{
+    color: whitesmoke;
+    padding: 10px;
+}
+
+/*css para presupuesto.html*/
+
+.titulo{
+    margin: 5px;
+    padding: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #E8D368;
+}
+
+.formulario label{
+    margin-bottom: 10px;
+    padding: 3px;
+}
+
+.formulario input{
+    padding: 10px;
+    margin-bottom: 6px;
+}
+
+.formulario textarea{
+    padding: 30px;
+}
+
+/*css para el apartado de contacto.hmtl*/
+
+.ubicacion{
+    margin: 15px;
+}
+
+.contenido{
+    display: flex;
+    flex-direction: column;
+}
+
+.mapa{
+    margin: 15px;
+    border: 2px solid gray;
+    border-radius: 5%;
+}
+
+.ubi{
+    margin: 15px;
+    color: white;
+}
+
+
+
+
+
+
+
