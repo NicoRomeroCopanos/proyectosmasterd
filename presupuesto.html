@@ -3,57 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre nosotros</title>
-    <link rel="stylesheet" href="../css/estilos.css">
+    <title>Presupuesto</title>
+    <link rel="stylesheet" href="../estilos/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <header>
         <h1>INFORMACIÓN</h1>
     </header>
 
     <nav>
-        <ul>
+        <div class="menú"></div>
             <a href="../index.html">Inicio</a>
-            <a href="../views/productos.html">Productos</a>
-            <a class="presupuestonav" href="presupuesto.html">SOBRE NOSOTROS</a>
+            <a href="../views/galería.html">Galería</a>
+            <a class="presupuestonav" href="">SOBRE NOSOTROS</a>
             <a href="../views/contacto.html">Contacto</a>
-        </ul>
     </nav>
-    
+
     <main>
-        <h2 class="titulo">Para cualquier información, 
-            rellene el formulario</h2>
-            <!--Formulario de la página-->
-        <form class="formulario">
-            <label for="name">Nombre</label>
-            <input type="text" id="name" name="name" placeholder="Escriba su nombre" 
-                    pattern="[A-Z a-z]{3,20}" required>
+        <h2 class="titulo">Para cualquier información,
+            rellene el formulario
+        </h2>
+        <!--Formulario de la página-->
+        <div class="formu">    
+            <form id="formulario" name="formulario">
+                <fieldset>
+                    <legend>Datos personales</legend>
+                    <div>
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Escriba su nombre">
+                    </div>
+                    <div>
+                        <label for="apellido">Apellidos:</label>
+                        <input type="text" id="apellido" name="apellido" placeholder="Escriba su apellido">
+                    </div>
+                    <div>
+                        <label for="direccion">Dirección:</label>
+                        <input type="text" id="direccion" name="direccion" placeholder="Escriba su dirección">
+                    </div>
+                    <div>
+                        <label for="telefono">Teléfono:</label>
+                        <input type="text" id="telefono" name="telefono" placeholder="Escriba su telefono">
+                    </div>
+                    <div>
+                        <label for="edad">Edad:</label>
+                        <input type="text" id="edad" name="edad" placeholder="Escriba su edad">
+                    </div>
+                    <div>
+                        <label for="correo">Correo electrónico:</label>
+                        <input type="text" id="correo" name="correo" placeholder="Escriba su correo">
+                    </div>
 
-            <label for="email">email</label>
-            <input type="Email" id="email" name="email" placeholder="Tu correo electrónico"
-            pattern="[A-Z a-z 0-9 - _ . @]{5,40}" required>
+                    <h3 class="pres">Presupuesto:</h3>
+
+                    <div>
+                        <label for="producto">Elija el producto</label>
+                        <select name="producto" id="producto">
+                            <option value="Producto">Seleccione un producto</option>
+                            <option value="Mesa:230">1:Mesa de cocina, 230€</option>
+                            <option value="Sofa:600">2:Sofa Lounge, 600€</option>
+                            <option value="Armario:300">3:Armario madera, 300€</option>
+                            <option value="Mesa esc:200">4:Mesa de escritorio, 200€</option>
+                            <option value="Cama:800">5:Cama matrimonio, 800€</option>
+                        </select>
+                        <input type="button" name="carro" id="carro">
+                        </div>
+                        <div>
+                        <label for="plazos">Plazos</label>
+                        <select name="plazos" id="plazos">
+                            <option value="unico">Pago único</option>
+                            <option value="3">3 meses</option>
+                            <option value="6">6 meses</option>
+                            <option value="9">9 meses</option>
+                            <option value="12">12 meses</option>
+                        </select> 
+                    </div>
+                
+                    <h4 class="personalizar">Personalice su producto</h4>
+
+                    <div>
+                        <label for="color">Elija un color</label>
+                        <input type="color" name="color" id="color">
+                    </div>
+                    <div class="extras">
+                        <label>
+                            <input type="checkbox" class="checkbox-extra" value="envío rapido: 10€">
+                            envio rapido 10€
+                        </label>
+
+                        <label>
+                            <input type="checkbox" class="checkbox-extra" value="retirada antiguo: 50€">
+                            retirada del antiguo 50€
+                        </label>
+
+                        <label>
+                            <input type="checkbox" class="checkbox-extra" value="seguro: 50€">
+                            seguro vitalicio 50€
+                        </label>
+                    </div>
+
+                    <div class="carrito" id="contenedor-carrito">
+                        <h4>Carrito</h4>
+                        <div id="articulos-carrito"></div>
+                    </div>
+                    <div class="descuento">
+                        <h4>Descuento</h4>
+                        <label>
+                            <input type="radio" name="descuento" value="0">
+                            ninguno
+                        </label>
+                        <label>
+                            <input type="radio" name="descuento" value="0.1">
+                            15%
+                        </label>
+                        <label>
+                            <input type="radio" name="descuento" value="0.3">
+                            30%
+                        </label>
+                    </div>
+
+                    <div>
+                        <p class="total" id="total-final">Precio: 0€</p>  
+                    </div>
                     
+                    <div>
+                        <label for="privacidad">He leido la política de privacidad</label>
+                        <input type="checkbox" id="privacidad" name="privacidad">
+                    </div>
+                    <div>
+                        <input type="submit" id="enviar" value="enviar">
+                        <input type="button" id="calcular" value="calcular">
+                        <input type="reset"  id="borrar" value="Borrar">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
 
-            <label for="teléfono">Teléfono</label>
-            <input type="tel" id="teléfono" pattern="[0-9]{9}" required>
-
-            <label for="mensaje">Mensaje</label>
-            <textarea name="mensaje" id="mensaje" rows="4"
-            placeholder="Escribe..."></textarea>
-
-            <label for="privacidad">Política de privacidad</label>
-            <input type="checkbox" value="aceptar" required>
-
-            <input type="submit" value="enviar">
-        </form>
     </main>
 
     <footer>
-        <a href="#"><img src="../assets/logoinsta.svg" alt="logo de instagram" class="insta"></a> 
-        <a href="#"><img src="../assets/logotwitter.svg" alt="logo de twitter" class="x"></a>
-        <a href="#">C/Guasp 16, Coll d'en Rabassa</a>
-        <a href="#">Aviso legal</a>
+        <a href="#"><img src="../assets/logoinsta.svg" alt="logo insta" class="insta"></a> 
+       <a href="#"><img src="../assets/logotwitter.svg" alt="logo twitter" class="twitter"></a>
+       <a href="#"><img src="../assets/logotiktok.svg" alt="logo tiktok" class="tiktok"></a>
+       <a href="https://maps.app.goo.gl/dv6U54gyEmEBczEC7">Carrer Cal Jutge,13</a>
+       <a href="">Aviso legal</a>
     </footer>
+
+    <script src="../JS/formulario.js"></script>
     
 </body>
 </html>

@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Share Tech", sans-serif;
+}
+/*estructura de la página*/
+body{
+    min-height: 100vh;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "main"
+    "footer";
+    grid-template-rows: 120px 40px 1fr 120px;
+    display: grid;
+}
+
+header{
+    background-color: #332E2E;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 30px;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 15px;  
+}
+/*estilos para el menú*/
+nav{
+    background-color: #AB4843;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.inicionav{
+    transition: all 0.3s ease-in-out;
+}
+
+.inicionav:hover{
+    transform: translateY(-7px);
+}
+
+.productosnav{
+    transition: all 0.3s ease-in-out;
+}
+
+.productosnav:hover{
+    transform: translateY(-7px);
+}
+
+.presupuestonav{
+    transition: all 0.3s ease-in-out;
+}
+
+.presupuestonav:hover{
+    transform: translateY(-7px);
+}
+
+.contactonav{
+    transition: all 0.3s ease-in-out;
+}
+
+.contactonav:hover{
+    transform: translateY(-7px);
+}
+
+a{
+    color: #332E2E;
+}
+
+main{
+    background-color: #804A47;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;   
+}
+/*foto de fondo en la pagina de inicio*/
+.fototienda{
+    background: url(../assets/fototienda.jpg);
+    background-attachment: fixed;
+    height: 100%;
+}
+
+.cuerpo{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 60px;
+    
+}
+/*estilos para el carrusel de fotos*/
+.carrusel-contenedor{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 70%;
+    max-width: 800px; 
+}
+
+.carrusel{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    transition: all 0.5s ease-in-out;  
+}
+
+.caja{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: aqua;
+    font-size: 20px
+}
+
+.caja.activa{
+    flex: 3;
+    transform: scale(1.2);
+    z-index: 10;
+}
+
+.caja.inactiva{
+    opacity: 0.5;
+    transform: scale(0.8);
+}
+
+.caja img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.prev-boton,
+.next-boton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    background-color: brown;
+    border: none;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 70%;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.prev-boton{
+    left: -50px;
+}
+
+.next-boton{
+    right: -50px;
+}
+
+
+
+.subtitulo{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.titulo{
+    display: flex;
+    text-align: center;
+    margin-top: 50px;
+}
+/*estilos para el formulario*/
+.formu{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 300px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    text-align: left;
+    height: 500px;
+    width: 800px;
+    
+}
+
+.pres{
+    display: flex;
+    margin-left: 20px;
+}
+
+.personalizar{
+    display: flex;
+    margin-left: 20px;
+}
+
+.extras{
+   display: flex;
+   flex-direction: column;
+    
+}
+
+input{
+    width: 300px;
+    height: 20px;
+}
+
+
+form, div{
+    margin: 20px;
+}
+/*estilos para el mapa*/
+#map{
+    width: 800px;
+    height: 600px;
+    border-radius: 3px;
+}
+/*estilos para el pie de la pagina y los logos*/
+footer{
+    background-color: #D53830;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.insta{
+    height: 20px;
+    width: 20px;
+}
+
+.twitter{
+    height: 20px;
+    width: 20px;
+}
+
+.tiktok{
+    height: 20px;
+    width: 20px;
+}
